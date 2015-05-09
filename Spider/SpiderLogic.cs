@@ -304,7 +304,7 @@ namespace Spider
             string path = "";
             lock (mLocker)
             {
-                string name = url.Replace('/', 't').Replace('.', 't').Replace(':', 't');
+                string name = url.Replace('/', '@').Replace('.', '#').Replace(':', '$');
                 path = string.Format("{0}\\{1}.txt", Path, name);
             }
 

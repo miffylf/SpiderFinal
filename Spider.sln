@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Spider", "Spider\Spider.csp
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Index", "Index\Index.csproj", "{83374FE3-5AA2-4818-BF95-62BE9152DD0A}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LuceneIndex", "LuceneIndex\LuceneIndex.csproj", "{E3353DCB-CAD4-46B9-A2BA-9C13F796A831}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{83374FE3-5AA2-4818-BF95-62BE9152DD0A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{83374FE3-5AA2-4818-BF95-62BE9152DD0A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{83374FE3-5AA2-4818-BF95-62BE9152DD0A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E3353DCB-CAD4-46B9-A2BA-9C13F796A831}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E3353DCB-CAD4-46B9-A2BA-9C13F796A831}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E3353DCB-CAD4-46B9-A2BA-9C13F796A831}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E3353DCB-CAD4-46B9-A2BA-9C13F796A831}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
