@@ -5,6 +5,8 @@ VisualStudioVersion = 12.0.31101.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Spider", "Spider\Spider.csproj", "{CCAB7E3F-32D0-4A2C-8CF4-FED45A805248}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Index", "Index\Index.csproj", "{83374FE3-5AA2-4818-BF95-62BE9152DD0A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{CCAB7E3F-32D0-4A2C-8CF4-FED45A805248}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{CCAB7E3F-32D0-4A2C-8CF4-FED45A805248}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{CCAB7E3F-32D0-4A2C-8CF4-FED45A805248}.Release|Any CPU.Build.0 = Release|Any CPU
+		{83374FE3-5AA2-4818-BF95-62BE9152DD0A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{83374FE3-5AA2-4818-BF95-62BE9152DD0A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{83374FE3-5AA2-4818-BF95-62BE9152DD0A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{83374FE3-5AA2-4818-BF95-62BE9152DD0A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -130,7 +130,7 @@ namespace Spider
         #region 成员变量
         private readonly object mLocker = new object();
         private string mBaseurl = null;
-        private static Encoding GB18030 = Encoding.GetEncoding("GB2312");   // GB18030兼容GBK和GB2312
+        private static Encoding GB18030 = Encoding.GetEncoding("GB18030");   // GB18030兼容GBK和GB2312
         private static Encoding UTF8 = Encoding.UTF8;
         private string mUserAgent = "Mozilla/4.0 (compatible; MSIE 8.0; Windows NT 6.1; Trident/4.0)";
         private string mAccept = "text/html";
@@ -459,6 +459,8 @@ namespace Spider
                 IsFinish = false;
             }
         }
+
+
         #endregion
     }
 
