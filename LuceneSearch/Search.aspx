@@ -106,7 +106,7 @@
         <ul id="hotwordsUL">
             <asp:Repeater ID="hotwordsRepeater" runat="server">
                 <ItemTemplate>
-                    <li><%--<a href='CreateIndex.aspx?kw=<%#Eval("Keyword") %>'>--%><%#Eval("Keyword") %><%--</a>--%></li>
+                    <li><a href='Search.aspx?kw=<%#Eval("Keyword") %>'><%#Eval("Keyword") %></a></li>
                 </ItemTemplate>
             </asp:Repeater>
         </ul>
