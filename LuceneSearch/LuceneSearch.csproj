@@ -7,12 +7,12 @@
     <ProductVersion>
     </ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{E3353DCB-CAD4-46B9-A2BA-9C13F796A831}</ProjectGuid>
+    <ProjectGuid>{4D48B952-BD34-4C74-B2C5-8E019FE6B25A}</ProjectGuid>
     <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>LuceneIndex</RootNamespace>
-    <AssemblyName>LuceneIndex</AssemblyName>
+    <RootNamespace>LuceneSearch</RootNamespace>
+    <AssemblyName>LuceneSearch</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <UseIISExpress>true</UseIISExpress>
     <IISExpressSSLPort />
@@ -90,8 +90,9 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="SearchSuggestion.ashx" />
     <Content Include="bin\Dict\Dict.dct" />
-    <Content Include="bin\LuceneIndex.dll.config" />
+    <Content Include="bin\LuceneSearch.dll.config" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -112,15 +113,14 @@
     <Content Include="bin\Lucene.Net.dll" />
     <Content Include="bin\Lucene.Net.pdb" />
     <Content Include="bin\Lucene.Net.xml" />
-    <Content Include="bin\LuceneIndex.dll" />
-    <Content Include="bin\LuceneIndex.pdb" />
+    <Content Include="bin\LuceneSearch.dll" />
+    <Content Include="bin\LuceneSearch.pdb" />
     <Content Include="bin\PanGu.dll" />
     <Content Include="bin\PanGu.HighLight.dll" />
     <Content Include="bin\PanGu.HighLight.pdb" />
     <Content Include="bin\PanGu.Lucene.Analyzer.dll" />
     <Content Include="bin\Quartz.dll" />
     <Content Include="bin\Quartz.xml" />
-    <Content Include="CreateIndex.aspx" />
     <Content Include="dll\Common.Logging.dll" />
     <Content Include="dll\log4net.dll" />
     <Content Include="dll\log4net.xml" />
@@ -134,25 +134,37 @@
     <Content Include="dll\Quartz.dll" />
     <Content Include="dll\Quartz.xml" />
     <Content Include="Global.asax" />
+    <Content Include="Search.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="CreateIndex.aspx.cs">
-      <DependentUpon>CreateIndex.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="CreateIndex.aspx.designer.cs">
-      <DependentUpon>CreateIndex.aspx</DependentUpon>
-    </Compile>
+    <Compile Include="Dao\KeywordDao.cs" />
+    <Compile Include="Dao\SearchSumDao.cs" />
+    <Compile Include="Dao\SqlHelper.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="LuceneLogic.cs" />
+    <Compile Include="Logic\CommonHelper.cs" />
+    <Compile Include="Logic\MyPage.cs" />
+    <Compile Include="Logic\SearchResult.cs" />
+    <Compile Include="Model\SearchSum.cs" />
+    <Compile Include="Model\SerachKeyword.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Search.aspx.cs">
+      <DependentUpon>Search.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Search.aspx.designer.cs">
+      <DependentUpon>Search.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SearchSuggestion.ashx.cs">
+      <DependentUpon>SearchSuggestion.ashx</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="LuceneIndex\Models\" />
+    <Folder Include="css\" />
+    <Folder Include="js\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
@@ -167,9 +179,9 @@
         <WebProjectProperties>
           <UseIIS>True</UseIIS>
           <AutoAssignPort>True</AutoAssignPort>
-          <DevelopmentServerPort>43383</DevelopmentServerPort>
+          <DevelopmentServerPort>47389</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
-          <IISUrl>http://localhost:43383/</IISUrl>
+          <IISUrl>http://localhost:47389/</IISUrl>
           <NTLMAuthentication>False</NTLMAuthentication>
           <UseCustomServer>False</UseCustomServer>
           <CustomServerUrl>
