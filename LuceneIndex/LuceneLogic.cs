@@ -65,6 +65,10 @@ namespace LuceneIndex
                     string url = item.Substring(item.LastIndexOf("\\") + 1, (item.LastIndexOf(".") - item.LastIndexOf("\\") - 1));  //文件名
                     string title = doc.title;
                     string body = doc.body.innerText;
+                    if (string.IsNullOrEmpty(title) || string.IsNullOrEmpty(body))
+                    {
+                        continue;
+                    }
                     //为避免重复索引，先输出number=i的记录，在重新添加
                     write.DeleteDocuments(new Term("number", count.ToString()));
 
@@ -74,15 +78,18 @@ namespace LuceneIndex
                     document.Add(new Field("title", title, Field.Store.YES, Field.Index.NOT_ANALYZED));
                     document.Add(new Field("body", body, Field.Store.YES, Field.Index.ANALYZED, Field.TermVector.WITH_POSITIONS_OFFSETS));
                     write.AddDocument(document);
-
+                    file.Dispose();
                 }
             }
             catch (Exception ex)
             {
                 throw ex;
             }
-            write.Close();
-            directory.Close();
+            finally
+            {
+                write.Close();
+                directory.Close();
+            }
         }
 
     }

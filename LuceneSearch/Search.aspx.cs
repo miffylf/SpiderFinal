@@ -84,7 +84,7 @@ namespace LuceneSearch
                 //检索结果中只有文档的id，如果要取Document，则需要Doc再去取
                 //降低内容占用
                 Document doc = searcher.Doc(docID);
-                string number = doc.Get("number");
+                string number = doc.Get("number").Replace('@', '/').Replace('#', '.').Replace('$', ':');
                 string title = doc.Get("title");
                 string body = doc.Get("body");
 
