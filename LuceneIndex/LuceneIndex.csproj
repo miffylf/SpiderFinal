@@ -146,7 +146,9 @@
     <Content Include="dll\Quartz.dll" />
     <Content Include="dll\Quartz.xml" />
     <Content Include="Global.asax" />
-    <Content Include="Web.config" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="CreateIndex.aspx.cs">
@@ -159,6 +161,7 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="IndexJob.cs" />
     <Compile Include="LuceneLogic.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

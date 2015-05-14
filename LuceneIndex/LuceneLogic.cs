@@ -1,4 +1,10 @@
-﻿using Lucene.Net.Analysis.PanGu;
+﻿//======================================================================
+// 所属项目：Spider
+// 创 建 人：lifei
+// 创建日期：2015/5/2
+// 用    途：创建索引
+//====================================================================== 
+using Lucene.Net.Analysis.PanGu;
 using Lucene.Net.Documents;
 using Lucene.Net.Index;
 using Lucene.Net.Store;
@@ -16,10 +22,12 @@ namespace LuceneIndex
 {
     public class LuceneLogic
     {
+        #region 声明变量
         Document docment;
         private static Encoding GB18030 = Encoding.GetEncoding("GB18030");   // GB18030兼容GBK和GB2312
         private static Encoding UTF8 = Encoding.UTF8;
         static RedisClient mRedisClient;
+        #endregion
 
         public LuceneLogic()
         {
@@ -29,6 +37,7 @@ namespace LuceneIndex
             docment = new Document();
         }
 
+        #region 方法
         public void CreateIndex()
         {
 
@@ -133,6 +142,7 @@ namespace LuceneIndex
             }
             return redisInfo;
         }
+        #endregion
 
     }
 }

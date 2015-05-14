@@ -1,4 +1,10 @@
-﻿using System;
+﻿//======================================================================
+// 所属项目：Spider
+// 创 建 人：lifei
+// 创建日期：2015/5/2
+// 用    途：查询关键字
+//====================================================================== 
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -9,6 +15,7 @@ namespace LuceneSearch
 {
     public class KeywordDao
     {
+        #region 方法
         public IEnumerable<SearchSum> GetSuggestion(string kw)
         {
             DataTable dt = SqlHelper.ExecuteDataTable(@"select top 5 Keyword,count(*) as searchcount  from keywords 
@@ -62,6 +69,11 @@ namespace LuceneSearch
             return list;
         }
 
+        /// <summary>
+        /// 添加关键字
+        /// </summary>
+        /// <param name="searchKeyword"></param>
+        /// <returns></returns>
         public int Add
            (SerachKeyword searchKeyword)
         {
@@ -76,6 +88,7 @@ namespace LuceneSearch
 
 
         }
+        #endregion
 
 
     }

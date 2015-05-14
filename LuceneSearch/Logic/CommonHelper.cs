@@ -1,4 +1,10 @@
-﻿using Lucene.Net.Analysis;
+﻿//======================================================================
+// 所属项目：Spider
+// 创 建 人：lifei
+// 创建日期：2015/5/2
+// 用    途：分词
+//====================================================================== 
+using Lucene.Net.Analysis;
 using Lucene.Net.Analysis.PanGu;
 using System;
 using System.Collections.Generic;
@@ -10,6 +16,7 @@ namespace LuceneSearch.Logic
 {
     public class CommonHelper
     {
+        #region 分词
         //分词，注意这儿的分词算法要和前面的算法一致，都为PanGu分词
         public static string[] SplitWord(string str)
         {
@@ -23,5 +30,6 @@ namespace LuceneSearch.Logic
             }
             return list.ToArray();
         }
+        #endregion
     }
 }

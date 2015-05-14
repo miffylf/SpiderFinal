@@ -1,4 +1,10 @@
-﻿using System;
+﻿//======================================================================
+// 所属项目：Spider
+// 创 建 人：lifei
+// 创建日期：2015/5/2
+// 用    途：分页
+//====================================================================== 
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -8,6 +14,7 @@ namespace LuceneSearch.Logic
 {
     public class MyPage
     {
+        #region 分页方法
         public int TotalCount { get; set; }
         public int PageSize { get; set; }
         public int CurrentPageIndex { get; set; }
@@ -93,5 +100,6 @@ namespace LuceneSearch.Logic
             sb.Append("<a href='").Append(url).Append("'>").Append(text).Append("</a>");
             return sb.ToString();
         }
+        #endregion
     }
 }

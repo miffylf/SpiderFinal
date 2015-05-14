@@ -1,4 +1,10 @@
-﻿using System;
+﻿//======================================================================
+// 所属项目：Spider
+// 创 建 人：lifei
+// 创建日期：2015/5/2
+// 用    途：redis缓存
+//====================================================================== 
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -16,6 +22,8 @@ namespace Spider
             int port = Convert.ToInt32(GetConfig("Port"));
             mRedisClient = new RedisClient(host, port);
         }
+
+        #region 获取配置文件信息
         /// <summary>
         /// 读取配置文件
         /// </summary>
@@ -30,6 +38,7 @@ namespace Spider
             object temp = ConfigurationManager.AppSettings[Key];
             return temp;
         }
+        #endregion
 
         #region redis操作
         /// <summary>
@@ -49,13 +58,7 @@ namespace Spider
             }
         }
 
-        //public bool HashValue(string Url, string Value)
-        //{
-        //    try
-        //    {
-                
-        //    }
-        //}
+ 
         #endregion
 
     }

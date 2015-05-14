@@ -1,4 +1,10 @@
-﻿using System;
+﻿//======================================================================
+// 所属项目：Spider
+// 创 建 人：lifei
+// 创建日期：2015/5/2
+// 用    途：爬虫
+//====================================================================== 
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -466,6 +472,7 @@ namespace Spider
 
     public class RequestState
     {
+        #region 成员变量
         private const int BUFFER_SIZE = 131072; //接收数据包的空间大小
         private byte[] _data = new byte[BUFFER_SIZE]; //接收数据包的buffer
         private StringBuilder _sb = new StringBuilder(); //存放所有接收到的字符
@@ -497,6 +504,7 @@ namespace Spider
                 return BUFFER_SIZE;
             }
         }
+        #endregion
 
         public RequestState(HttpWebRequest req, string url, int depth)
         {
