@@ -46,7 +46,7 @@ namespace LuceneSearch
             MyPage pager = new MyPage();
             pager.TryParseCurrentPageIndex(Request["pagenum"]);
             //超链接href属性
-            pager.UrlFormat = "CreateIndex.aspx?pagenum={n}&kw=" + Server.UrlEncode(kw);
+            pager.UrlFormat = "Search.aspx?pagenum={n}&kw=" + Server.UrlEncode(kw);
 
             int startRowIndex = (pager.CurrentPageIndex - 1) * pager.PageSize;
 
