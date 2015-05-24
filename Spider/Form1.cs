@@ -45,7 +45,7 @@ namespace Spider
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            tbxUrl.Text = "cust.edu.cn";
+            tbxUrl.Text = "www.163.com";
         }
 
         private void btnPath_Click(object sender, EventArgs e)

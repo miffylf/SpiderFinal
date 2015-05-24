@@ -170,7 +170,7 @@ namespace Spider
             {
                 return;
             }
-
+        http://111.27.2.14:8089/LuceneSearch/Search.aspx
             foreach (var item in Unread)
             {
                 if (read.Keys.Contains(item.Key))
@@ -248,7 +248,7 @@ namespace Spider
             }
             catch (Exception ex)
             {
-                MessageBox.Show("ReceivedResource " + ex.Message + url);
+                //MessageBox.Show("ReceivedResource " + ex.Message + url);
             }
         }
 
